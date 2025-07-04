@@ -15,16 +15,16 @@ O sistema precisa atender os seguintes requisitos:
   * Rua, bairro, estado
   * Biografia
 - [ ] Formulário para edição dos dados acima, com envio das alterações.
-- [ ] Salvar as informações em um banco de dados MySQL.
+- [x] Salvar as informações em um banco de dados MySQL.
 - [ ] A aplicação deve ser responsiva, com boa aparência tanto em dispositivos móveis quanto em desktops.
 
 ## 1.1. Tecnologias em uso
-|Tecnologia|Em prol de:|
-|:-----:|-----|
-| <img src="https://wp.logos-download.com/wp-content/uploads/2016/09/PHP_logo.png" height="30px">  | Back-end, API, Rotas |
-| <img src="https://static.vecteezy.com/system/resources/previews/053/066/792/non_2x/free-logo-bulma-free-png.png" height="30px">  | Layout do site |
-| <img src="https://getcomposer.org/img/logo-composer-transparent.png" height="30px">  | Gerenciador de pacotes para projetos PHP |
-| <img src="https://1000logos.net/wp-content/uploads/2020/08/Git-Logo.png" height="30px">  | Versionamento do projeto |
+| Tecnologia | Em prol de: |
+|:----------:|-------------|
+| <img src="https://wp.logos-download.com/wp-content/uploads/2016/09/PHP_logo.png" style="height:40px"> | Back-end, API, Rotas |
+| <img src="https://static.vecteezy.com/system/resources/previews/053/066/792/non_2x/free-logo-bulma-free-png.png" style="height:40px"> | Layout do site |
+| <img src="https://getcomposer.org/img/logo-composer-transparent.png" style="height:40px"> | Gerenciador de pacotes para projetos PHP |
+| <img src="https://1000logos.net/wp-content/uploads/2020/08/Git-Logo.png" style="height:40px"> | Versionamento do projeto |
 
 ## 1.2. Como usar o projeto
 
