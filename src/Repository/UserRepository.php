@@ -54,8 +54,8 @@ class UserRepository extends Repository implements RepositoryInterface
      */
     public function create(object $data): void
     {
-        $sql =  "INSERT INTO user (first_name, second_name, date_birth, street, city, neighborhood, state, description) 
-                            VALUE (:fn, :sn, :db, :st, :ct,:ng, :sta, :ds)";
+        $sql =  "INSERT INTO user (first_name, second_name, date_birth, street, city, neighborhood, state, description, profile_photo) 
+                            VALUE (:fn, :sn, :db, :st, :ct,:ng, :sta, :ds, :pf)";
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue("fn", htmlentities($data->getFirst_name()));
@@ -66,10 +66,10 @@ class UserRepository extends Repository implements RepositoryInterface
         $stmt->bindValue("ng", htmlentities($data->getNeighborhood()));
         $stmt->bindValue("sta", htmlentities($data->getState()));
         $stmt->bindValue("ds", htmlentities($data->getDescription()));
+        $stmt->bindValue("pf", htmlentities($data->getProfile_photo()));
 
         $stmt->execute();
     }
-
 
     /**
      * 
@@ -90,7 +90,8 @@ class UserRepository extends Repository implements RepositoryInterface
                         city = :ct, 
                         neighborhood = :ng, 
                         state = :sta, 
-                        description = :ds 
+                        description = :ds,
+                        profile_photo = :pf
                     WHERE user_code = :uc";
 
         $stmt = $this->pdo->prepare($sql);
@@ -103,6 +104,7 @@ class UserRepository extends Repository implements RepositoryInterface
         $stmt->bindValue("sta", htmlentities($data->getState()));
         $stmt->bindValue("ds", htmlentities($data->getDescription()));
         $stmt->bindValue("uc", htmlentities($id));
+        $stmt->bindValue("pf", htmlentities($data->getProfile_photo()));
 
         $stmt->execute();
     }

@@ -8,4 +8,5 @@ city TEXT,
 neighborhood TEXT,
 state TEXT,
 description TEXT, 
+profile_photo TEXT,
 PRIMARY KEY(user_code));

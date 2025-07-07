@@ -21,6 +21,8 @@ class Router
     public function dispatch($requestMethod, $requestUri)
     {
         $uri = parse_url($requestUri, PHP_URL_PATH);
+        $request = new Request();
+        $response = new Response();
 
         foreach (self::$routes as $route) {
             $pattern = preg_replace('#\{[a-zA-Z_][a-zA-Z0-9_]*\}#', '([^/]+)', $route['path']);
@@ -28,7 +30,15 @@ class Router
 
             if ($route['method'] === $requestMethod && preg_match($pattern, $uri, $matches)) {
                 array_shift($matches);
-                return call_user_func_array($route['handler'], $matches);
+
+                $args = $matches;
+
+                if ($requestMethod === 'POST') {
+                    array_unshift($args, $response);
+                    array_unshift($args, $request);
+                }
+
+                return call_user_func_array($route['handler'], $args);
             }
         }
 

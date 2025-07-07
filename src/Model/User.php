@@ -2,10 +2,11 @@
 
 namespace LyraMaker\Entrevista\Model;
 
+/** @package LyraMaker\Entrevista\Model */
 class User
 {
     private ?string $user_code;
-    private ?string $photo_path;
+    private ?string $profile_photo;
     private ?string $first_name;
     private ?string $second_name;
     private ?string $date_birth;
@@ -15,7 +16,7 @@ class User
     private ?string $state;
     private ?string $description;
 
-    public function __construct($user_code = null, $first_name = null, $second_name = null, $date_birth = null, $street = null, $city = null, $neighborhood = null, $state = null, $description = null)
+    public function __construct($user_code = null, $first_name = null, $second_name = null, $date_birth = null, $street = null, $city = null, $neighborhood = null, $state = null, $description = null, $profile_photo = null)
     {
         $this->setFirst_name($first_name)
             ->setSecond_name($second_name)
@@ -24,7 +25,8 @@ class User
             ->setCity($city)
             ->setNeighborhood($neighborhood)
             ->setState($state)
-            ->setDescription($description);
+            ->setDescription($description)
+            ->setProfile_photo($profile_photo);
 
         if (!is_null($user_code)) {
             $this->setUser_code($user_code);
@@ -119,17 +121,6 @@ class User
         return $this;
     }
 
-    public function getPhoto_path()
-    {
-        return $this->photo_path;
-    }
-
-    public function setPhoto_path($photo_path)
-    {
-        $this->photo_path = $photo_path;
-        return $this;
-    }
-
     public function getCity()
     {
         return $this->city;
@@ -138,6 +129,17 @@ class User
     public function setCity($city)
     {
         $this->city = $city;
+        return $this;
+    }
+
+    public function getProfile_photo()
+    {
+        return $this->profile_photo;
+    }
+
+    public function setProfile_photo($profile_photo)
+    {
+        $this->profile_photo = $profile_photo;
         return $this;
     }
 }

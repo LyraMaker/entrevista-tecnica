@@ -8,15 +8,15 @@
 
 O sistema precisa atender os seguintes requisitos:
 
-- [ ] Exibição de informações do usuário, incluindo:
+- [x] Exibição de informações do usuário, incluindo:
   * Imagem de perfil
   * Nome completo
   * Idade
   * Rua, bairro, estado
   * Biografia
-- [ ] Formulário para edição dos dados acima, com envio das alterações.
+- [x] Formulário para edição dos dados acima, com envio das alterações.
 - [x] Salvar as informações em um banco de dados MySQL.
-- [ ] A aplicação deve ser responsiva, com boa aparência tanto em dispositivos móveis quanto em desktops.
+- [x] A aplicação deve ser responsiva, com boa aparência tanto em dispositivos móveis quanto em desktops.
 
 ## 1.1. Tecnologias em uso
 | Tecnologia | Em prol de: |
@@ -33,6 +33,41 @@ Para iniciar o projeto basta você iniciar como ponto de partida do servidor a p
 ```powershell
 php -S localhost:0 -t ./public
 ```
+
+A base do sistema é esta:
+
+```sql
+CREATE TABLE USER(
+user_code INT NOT NULL AUTO_INCREMENT, 
+first_name TEXT NOT NULL,
+second_name TEXT,
+date_birth DATE,
+street TEXT,
+city TEXT,
+neighborhood TEXT,
+state TEXT,
+description TEXT, 
+profile_photo TEXT,
+PRIMARY KEY(user_code));
+```
+Você precisará configurar o .env, seguindo o exemplo:
+
+```env
+DB_HOSTNAME =
+DB_DATABASE =
+DB_USERNAME =
+DB_PASSWORD =
+DB_DRIVER =
+
+#Enviroments from project
+
+project_title =
+project_author =
+project_since =
+base_url =
+
+```
+
 
 
 

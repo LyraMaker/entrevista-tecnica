@@ -7,4 +7,5 @@ class Database extends \PDO{
     {
         return parent::__construct("{$_ENV['DB_DRIVER']}:host={$_ENV['DB_HOSTNAME']};dbname={$_ENV['DB_DATABASE']}",$_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD']); 
     }
+
 }

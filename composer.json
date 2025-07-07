@@ -12,7 +12,11 @@
         }
     ],
     "autoload": {
-        "psr-4": {"LyraMaker\\Entrevista\\": "src/"}
-    }
-
+  "psr-4": {
+    "LyraMaker\\Entrevista\\": "src/"
+  },
+  "files": [
+    "src/Misc/functions.php"
+  ]
+}
 }
