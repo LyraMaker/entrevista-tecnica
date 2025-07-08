@@ -16,7 +16,7 @@
     <nav class="navbar is-centered-mobile has-background-info-light" role="navigation">
         <div class="navbar-brand is-flex is-justify-content-center is-align-items-center">
             <a href="./index.php" class="navbar-item is-uppercase has-text-black title-container">
-                <h1 class="title is-5">Sistema de perfis</h1>
+                <h1 class="title is-5"><?= $_ENV['project_title'] ?></h1>
             </a>
         </div>
         <div class="navbar-end is-hidden-touch">

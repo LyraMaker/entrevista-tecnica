@@ -2,6 +2,7 @@
 - [1. Sync360 - Perfil](#1-sync360---perfil)
   - [1.1. Tecnologias em uso](#11-tecnologias-em-uso)
   - [1.2. Como usar o projeto](#12-como-usar-o-projeto)
+  - [1.3. Teste online](#13-teste-online)
 
 
 # 1. Sync360 - Perfil
@@ -68,7 +69,9 @@ base_url =
 
 ```
 
+## 1.3. Teste online
 
+A aplicação pode ser acessada [neste link](https://entrevista.lyrathor.com/)
 
 
 
